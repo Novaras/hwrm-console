@@ -8,6 +8,13 @@ The console can run whole files, and also comes prepackaged with some commands.
 
 This mod is brand new, expect some bugs!
 
+## Index
+
+- [Controls](https://github.com/Novaras/hwrm-console#controls)
+- [Executing Lua In-Console](https://github.com/Novaras/hwrm-console#executing-lua-in-console)
+- [Running Lua from a Script](https://github.com/Novaras/hwrm-console#running-lua-from-a-script)
+- [Premade Commands](https://github.com/Novaras/hwrm-console#premade-commands)
+
 ## Controls
 
 The console is brought up with the `P` key. Close it again with `ESC`.
