@@ -135,7 +135,10 @@ COMMAND_FNS = {
 			consoleLog("destroy: missing one of either 't={ship-type}' or 'f={ship-family}', i.e 'destroy p=1 t=kus_scout'");
 		end
 		SobGroup_SetHealth(target_group, 0);
-	end
+	end,
+	gametime = function ()
+		consoleLog("gametime is " .. Universe_GameTime());
+	end,
 };
 
 function getParamVal(str, flag_pattern, value_pattern)
@@ -271,12 +274,14 @@ textCaptureMode = textCaptureMode or function (unbind)
 				elseif (keyname == 'SPACE') then
 					char = ' ';
 				elseif (keyname == 'F1') then
-					char = ',';
+					char = '.';
 				elseif (keyname == 'F2') then
-					char = ';';
+					char = ',';
 				elseif (keyname == 'F3') then
-					char = '[';
+					char = ';';
 				elseif (keyname == 'F4') then
+					char = '[';
+				elseif (keyname == 'F5') then
 					char = ']';
 				end
 			end
@@ -336,8 +341,6 @@ textCaptureMode = textCaptureMode or function (unbind)
 							char = '+';
 						elseif (keyname == 'APOSTROPHE') then
 							char = '\'';
-						elseif (keyname == 'F1') then
-							char = '.';
 						end
 					end
 					pushKeyBuffer(char);
