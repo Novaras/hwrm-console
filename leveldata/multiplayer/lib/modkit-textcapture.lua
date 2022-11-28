@@ -156,7 +156,7 @@ function parseCommand(line)
 	local words = strsplit(strlower(line), ' ', 1);
 	local command = words[1];
 
-	modkit.table.printTbl(words, "command words");
+	-- modkit.table.printTbl(words, "command words");
 
 	if (modkit.table.includesKey(COMMAND_FNS, command)) then
 		consoleLog("> " .. command);
@@ -287,12 +287,12 @@ textCaptureMode = textCaptureMode or function (unbind)
 			end
 			local keycode = globals()[keyname .. 'KEY'];
 			local callback_name = "pushKeyBuffer" .. keyname;
-			print('binding key ' .. keyname .. ' (' .. tostring(keycode) .. ')');
+			-- print('binding key ' .. keyname .. ' (' .. tostring(keycode) .. ')');
 
 			if (is_letter) then -- its a letter
-				print("letter bind is " .. callback_name .. " char = " .. char);
+				-- print("letter bind is " .. callback_name .. " char = " .. char);
 				rawset(globals(), callback_name, function ()
-					print("call for key " .. %char);
+					-- print("call for key " .. %char);
 					if (shift_state == 1) then
 						pushKeyBuffer(%char);
 					else
@@ -303,7 +303,7 @@ textCaptureMode = textCaptureMode or function (unbind)
 				rawset(globals(), callback_name, function ()
 					local keyname = %keyname;
 					local char = %char;
-					print("call for key " .. char);
+					-- print("call for key " .. char);
 					if (shift_state == 1) then
 						print("setting shift char for number " .. keyname);
 						if (keyname == 'ONE') then

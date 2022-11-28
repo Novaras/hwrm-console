@@ -235,7 +235,6 @@ if (H_SOBGROUP ~= 1) then
 	---@return string
 	function Volume_Fresh(name, position, radius, vol_type)
 		position = position or { 0, 0, 0 };
-		modkit.table.printTbl(position, "RECEIVED POS");
 		radius = radius or 10;
 		vol_type = vol_type or "sphere";
 		Volume_Delete(name);
