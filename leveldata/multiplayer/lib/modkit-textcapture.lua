@@ -139,6 +139,9 @@ COMMAND_FNS = {
 	gametime = function ()
 		consoleLog("gametime is " .. Universe_GameTime());
 	end,
+	log = function (line)
+		consoleLog(strsub(line, 4, strlen(line)));
+	end
 };
 
 function getParamVal(str, flag_pattern, value_pattern)

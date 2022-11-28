@@ -201,3 +201,17 @@ Logs the current gametime.
 ```
 gametime
 ```
+
+### `log`:
+
+Echos the given input.
+
+```
+log <line>
+```
+
+Example:
+
+```
+log hello world
+```
