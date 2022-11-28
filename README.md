@@ -1,5 +1,7 @@
 # hwrm console
 
+This mod was made with [modkit](https://github.com/Novaras/modkit).
+
 This is a mod for Homeworld Remastered which adds the ability to bring up an ingame console capable of executing Lua code.
 
 The console can run whole files, and also comes prepackaged with some commands.
